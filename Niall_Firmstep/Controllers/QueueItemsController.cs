@@ -209,7 +209,7 @@ namespace Niall_Firmstep.Controllers
 
         // POST: QueueItems/CreateOrganisation
         [HttpPost]
-        public ActionResult CreateAnonymousn([Bind(Include = "service")] QueueItem qi)
+        public ActionResult CreateAnonymous([Bind(Include = "service")] QueueItem qi)
         {
 
             qi.type = "Anonymous";

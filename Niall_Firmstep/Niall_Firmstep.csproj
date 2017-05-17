@@ -254,7 +254,7 @@
     <Content Include="Views\QueueItems\Test.cshtml" />
     <Content Include="Views\QueueItems\Select.cshtml" />
     <Content Include="Views\QueueItems\Create.cshtml" />
-    <Content Include="Views\QueueItems\CreateCitizen.cshtml" />
+    <Content Include="Views\QueueItems\OldCreateCitizen.cshtml" />
     <Content Include="Views\QueueItems\CreateOrganisation.cshtml" />
     <Content Include="Views\QueueItems\SelectCategory.cshtml" />
     <Content Include="Views\QueueItems\CategoryChosen.cshtml" />
@@ -264,6 +264,7 @@
     <Content Include="Views\QueueItems\Delete.cshtml" />
     <Content Include="Views\QueueItems\MyIndex.cshtml" />
     <Content Include="Views\QueueItems\CreateAnonymous.cshtml" />
+    <Content Include="Views\QueueItems\CreateCitizen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
