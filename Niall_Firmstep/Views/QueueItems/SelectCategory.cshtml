@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "SelectCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SelectCategory</h2>
+
+
+@* Html.BeginForm("Method","Controller",type of html get post etc) *@
+@using (Html.BeginForm("CategoryChosen", "QueueItems", FormMethod.Get))
+{
+
+    <fieldset>
+
+        Client Type
+
+        @Html.DropDownList("ClientType")
+
+        <p>
+
+            <input type="submit" value="Submit" />
+
+        </p>
+
+    </fieldset>
+
+}

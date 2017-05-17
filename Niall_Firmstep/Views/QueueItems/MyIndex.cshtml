@@ -1,0 +1,77 @@
+﻿
+@model IEnumerable<Niall_Firmstep.Models.QueueItem>
+
+@{
+    ViewBag.Title = "MyIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Current Queue</h2>
+
+
+<p>
+    @Html.Display("MyTime")
+</p>
+
+@*<p>
+        @Html.ActionLink("Create New", "SelectCategory")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.myTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.service)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateCreated)
+        </th>
+
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.myTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.service)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateCreated)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ID }) |*@
+                @Html.ActionLink("Remove", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<h2>MyIndex</h2>
+

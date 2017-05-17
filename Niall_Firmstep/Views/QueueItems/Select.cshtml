@@ -1,0 +1,69 @@
+﻿@model Niall_Firmstep.Models.QueueItem
+
+@{
+    ViewBag.Title = "Select";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Select</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>QueueItem</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @*<form action="/Controller/Method" method="get">*@
+
+
+        <form action="/QueueItemsController/Select" method="get">
+
+
+            <fieldset>
+                Client Type <select id="ClientType" name="ClientType">
+
+
+
+                    <option selected="selected" value="_"></option>
+
+                    <option value="0">Citizen</option>
+
+                    <option value="1">Organisation</option>
+
+
+
+
+                </select>
+
+                <p><input type="submit" value="Submit" /> </p>
+
+            </fieldset>
+
+        </form>
+
+
+
+            @*<div class="form-group">
+                 @Html.LabelFor(model => model.type, htmlAttributes: new { @class = "control-label col-md-2" })
+                 <div class="col-md-10">
+                     @Html.EnumDropDownListFor(model => model.type)
+                     @Html.DropDownListFor(model => model.type, Enum.GetValues(typeof(Niall_Firmstep.Models.ClientType)).Cast<Niall_Firmstep.Models.ClientType>()
+                   .Select(m => new SelectListItem { Text = m.ToString(), Value = m.ToString() }))
+                 @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                 </div>
+             </div>
+
+             <div class="form-group">
+                 <div class="col-md-offset-2 col-md-10">
+                     <input type="submit" value="Select" class="btn btn-default" />
+                 </div>
+             </div>*@
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

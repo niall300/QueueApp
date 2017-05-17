@@ -29,5 +29,7 @@ namespace Niall_Firmstep.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Niall_Firmstep.Models.QueueItem> QueueItems { get; set; }
     }
 }
